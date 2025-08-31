@@ -1,0 +1,264 @@
+body {
+    color: darkslategray;
+    margin: 0;
+    font-family: serif;
+    display: block;
+}
+
+.first-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    position: relative;
+    padding: 100px;
+}
+
+.picture.frame {
+    order: 2;
+    left: 0px;
+    position: absolute;
+    z-index: 0.5;
+    opacity: 0.2;
+    bottom: 0;
+    width: 250px;
+}
+
+.gradient.element {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    opacity: 0.1;
+    z-index: 0;
+    width: 400px;
+}
+
+.title-text {
+    order: 1;
+    text-align: left;
+    z-index: 1;
+}
+
+h1 {
+    color: rgb(154, 97, 245);
+    font-size: 4rem;
+    font-family: cursive;
+    margin: 50px auto 0 auto;
+    text-align: left;
+}
+
+h2 {
+    color: rgb(180, 145, 236);
+    font-family: sans-serif;
+    font-weight: normal;
+    padding-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.web {
+    text-decoration: underline;
+    text-transform: lowercase;
+}
+
+div {
+    display: block;
+}
+
+img {
+    width: 400px;
+}
+
+.second-container {
+    margin: 100px 0;
+}
+
+.circle-frame {
+    display: block;
+    margin: 0 auto;
+    width: 200px;             /* make it square */
+  height: 200px;            /* same width & height */
+  border-radius: 50%;       /* makes it a perfect circle */
+  border: 1px solid rgb(154, 97, 245);   /* frame color & thickness */
+  object-fit: cover;        /* ensures image fills circle without distortion */
+
+}
+
+.intro {
+    font-family: Montserrat, sans-serif;
+    font-weight: normal;
+    padding-bottom: 10px;
+    text-align: center;
+} 
+
+.summary {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+} 
+
+hr {
+   border: dotted rgb(215, 203, 238) 6px; 
+   border-bottom: none;
+   width: 4%;
+   margin: 100px auto;
+} 
+
+.resume {
+    text-align: center;
+    margin: 100px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: auto auto;
+    gap: 40px;
+    text-align: justify;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.btn {
+  display: inline-block;   /* makes spacing and padding easier */
+  margin-top: 20px;        /* space above button */
+  padding: 10px 20px;      /* inside padding */
+  background-color: rgb(154, 97, 245);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(120, 60, 200);
+}
+
+h3 {
+    color: rgb(154, 97, 245);
+}
+
+.reach-out {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h2, .resume h2, .reach-out h2 {
+    text-align: center;
+}
+
+.last-container {
+    background-color: rgb(154, 97, 245);
+    text-align: center;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.last-container .footer-link {
+    display: flex;              /* put links in a row */
+    justify-content: center;    /* center them */
+    gap: 20px;                  /* space between links */
+    margin-bottom: 15px;        /* space below links */
+}
+
+.last-container .footer-link a {
+    text-decoration: none;
+    color: rgb(63, 18, 134);
+    font-weight: bold;
+}
+
+.last-container .copyright {
+    font-size: 0.9rem;
+    color: darkslategray;
+}
+
+/* 📱 Small screens (mobile devices) */
+@media (max-width: 600px) {
+  .first-container {
+    flex-direction: column;    /* stack content */
+    padding: 50px 20px;        /* reduce padding */
+    text-align: center;
+  }
+
+  .title-text {
+    text-align: center;
+    order: 1;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  img {
+    width: 100%;               /* make images scale */
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .circle-frame {
+    width: 150px;
+    height: 150px;
+  }
+
+  .summary {
+    width: 90%;                /* make summary fit screen */
+  }
+
+  .parent {
+    grid-template-columns: 1fr; /* stack grid items */
+    gap: 20px;
+  }
+
+  .btn {
+    width: 100%;                /* full width button */
+    font-size: 1rem;
+  }
+
+  .last-container {
+    padding: 30px 15px;
+  }
+
+  .last-container .footer-link {
+    flex-direction: column;     /* stack links vertically */
+    gap: 10px;
+  }
+}
+
+/* 💻 Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .first-container {
+    flex-direction: column;
+    padding: 70px 40px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .summary {
+    width: 70%;
+  }
+
+  .parent {
+    grid-template-columns: 1fr 1fr; /* 2 columns for tablets */
+    gap: 30px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
